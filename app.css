@@ -8,11 +8,18 @@
   font-family: "Source Sans Pro", sans-serif;
   line-height: 1.618;
   font-weight: 400;
+  scroll-behavior: smooth;
 }
 
 body {
   background-color: #2f3238;
   color: #f5f5f5;
+}
+
+.section-title {
+  text-decoration: underline;
+  color: #1abc89;
+  font-size: 16px !important;
 }
 
 a {
@@ -43,6 +50,10 @@ p {
 header {
   text-align: center;
   padding-bottom: 3rem;
+}
+
+section {
+  margin-top: 5%;
 }
 
 .nav {
@@ -183,11 +194,9 @@ button.light {
   flex-direction: row;
   align-items: center;
   gap: 18px;
-  margin:4px;
+  margin: 10px 0 0 24px ;
 }
-.options button {
-  margin-left: 0.5rem;
-}
+
 
 .light {
   background-color: #f9f9f9;
@@ -203,6 +212,12 @@ button.light {
   fill: rgba(0, 0, 0, 0.1);
 }
 
-#dark{
+#dark {
   display: none;
+}
+
+footer
+{
+  display: flex;
+  justify-content: center;
 }
