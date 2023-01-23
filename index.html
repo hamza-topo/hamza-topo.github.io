@@ -5,28 +5,36 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hamza ait sidi said</title>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="app.css" />
   </head>
   <body>
+    <nav style="margin: 2%">
+      <ul>
+        <li><a>About Me</a></li>
+        <li><a>Projects</a></li>
+        <li><a>Hire Me</a></li>
+        <li><a>Blogs</a></li>
+      </ul>
+    </nav>
     <div class="container">
-      <nav style="margin: 2%">
-        <ul>
-          <li><a>About Me</a></li>
-          <li><a>Projects</a></li>
-          <li><a>Hire Me</a></li>
-          <li><a>Blogs</a></li>
-        </ul>
-      </nav>
       <header>
         <h1>Hamza ait sidi said</h1>
-        <p>
-          Hello World! My name is Hamza my friends love to call me
-          <a href="http://www.cjgammon.com/" target="_blank">TOPO</a>
-          I'm a FullStack web developper who loves to read to much ,improve his
-          skills learn new stuffs.
-        </p>
+        <div class="me">
+          <img src="img/me.jpg" alt="" />
+          <p class="small">
+            ``I got a captcha wrong once, so now I'm a robot``. <br />
+            Hello World! My name is Hamza my friends love to call me
+            <a href="http://www.cjgammon.com/" target="_blank">TOPO</a>
+            I'm a FullStack web developper who loves to read to much ,improve
+            his skills learn new stuffs.
+          </p>
+        </div>
+
         <p class="small"></p>
-        <p class="small">``I got a captcha wrong once, so now I'm a robot``.</p>
       </header>
       <main>
         <div class="items">
@@ -120,11 +128,22 @@
       </main>
     </div>
     <div class="options">
-      <button class="dark"></button>
-      <button class="light"></button>
+      <div>
+        <span id="dark" class="material-icons" onclick="mode(0)"
+          >dark_mode</span
+        >
+        <span id="light" class="material-icons" onclick="mode(1)"
+          >light_mode</span
+        >
+      </div>
+
       <a href="https://twitter.com/topo444042922" target="_blank">twitter</a>
       <a href="https://github.com/hamza-topo" target="_blank">github</a>
-      <a href="https://www.linkedin.com/in/hamza-hamza-a2ab1a24b/" target="_blank">linkedin</a>
+      <a
+        href="https://www.linkedin.com/in/hamza-hamza-a2ab1a24b/"
+        target="_blank"
+        >linkedin</a
+      >
     </div>
   </body>
   <script src="app.js"></script>
