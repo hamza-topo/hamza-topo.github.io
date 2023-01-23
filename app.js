@@ -69,3 +69,7 @@ function mode(mode) {
     document.getElementById("light").style.display = "none";
   }
 }
+
+function openProject(url) {
+  window.open(url, "_blank");
+}
