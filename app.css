@@ -215,11 +215,44 @@ button.light {
   display: none;
 }
 
-.services {
-  display: flex;
-  flex-direction: row;
-  gap: 65px;
-  justify-content: space-between;
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .services {
+    display: flex;
+    flex-direction: column;
+    gap: 65px;
+    justify-content: space-between;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .services {
+    display: flex;
+    flex-direction: column;
+    gap: 65px;
+    justify-content: space-between;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .services {
+    display: flex;
+    flex-direction: row;
+    gap: 65px;
+    justify-content: space-between;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .services {
+    display: flex;
+    flex-direction: row;
+    gap: 65px;
+    justify-content: space-between;
+  }
 }
 
 .item-service {
@@ -246,4 +279,32 @@ footer {
 }
 span {
   cursor: pointer;
+}
+
+.header-title-light {
+  color: #1abc89;
+  animation: light 5s infinite;
+}
+
+@keyframes light {
+  from {
+    color: white;
+  }
+  to {
+    color: #1abc89;
+  }
+}
+
+.header-title-dark {
+  color: #1abc89;
+  animation: Dark 5s infinite;
+}
+
+@keyframes dark {
+  from {
+    color: black;
+  }
+  to {
+    color: #1abc89;
+  }
 }
