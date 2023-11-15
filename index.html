@@ -1,227 +1,379 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hamza ait sidi said</title>
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="app.css" />
-  </head>
-  <body>
-    <nav style="margin: 2%">
-      <ul class="nav-items">
-        <li><a href="#about-me">About Me</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#work-with-me">Let's work together</a></li>
-        <li><a href="blog.html">Blogs</a></li>
-      </ul>
-    </nav>
-    <div class="container">
-      <header>
-        <h1 class="header-title-light">Hamza ait sidi said</h1>
-      </header>
-      <main>
-        <section id="about-me">
-          <h1 class="section-title">Me</h1>
-          <div class="me">
-            <img src="img/me.jpg" alt="" />
-            <p class="small">
-              ``I got a captcha wrong once, so now I'm a robot``. <br />
-              Hi, my name is Hamza but my friends love's to call me
-              <a href="javascript:;">TOPO</a>,I am a 28-year-old full-stack
-              developer from Morocco. I specialize in Laravel, Livewire, and
-              AlpineJS. I fell in love with PHP and Laravel when I was 24. When
-              I'm not coding, I enjoy exploring topics such as rap music,
-              religion, red pill philosophy, and tuffting.
-            </p>
-          </div>
-        </section>
-        <section id="projects">
-          <h1 class="section-title">Work On</h1>
-          <div class="items">
-            <div class="item" onclick="openProject('https://filovent.com/')">
-              <div class="item-header">
-                Technologies : Laravel 9 | PHP 8.0 | Livewire | Alpinejs
-              </div>
-              <svg preserveAspectRatio="xMidYMid slice" viewBox="0 0 300 200">
-                <defs>
-                  <clipPath id="clip-0">
-                    <circle cx="0" cy="0" fill="#000" r="150px"></circle>
-                  </clipPath>
-                </defs>
-                <text class="svg-text" dy=".3em" x="50%" y="50%">Filovent</text>
-                <g clip-path="url(#clip-0)">
-                  <image
-                    height="100%"
-                    preserveAspectRatio="xMinYMin slice"
-                    width="100%"
-                    xlink:href="img/filovent.png"
-                  ></image>
-                  <text class="svg-masked-text" dy=".3em" x="50%" y="50%">
-                    FILOVENT
-                  </text>
-                </g>
-              </svg>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hamza ait sidi said</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <link rel="stylesheet" href="app.css" />
+</head>
+
+<body>
+  <nav style="margin: 2%">
+    <ul class="nav-items">
+      <li><a href="#about-me">About Me</a></li>
+      <li><a href="blog.html">Blogs</a></li>
+    </ul>
+  </nav>
+  <div class="container">
+    <header>
+      <h1 class="header-title-light">Hamza ait sidi said</h1>
+    </header>
+    <main>
+      <section id="about-me">
+        <h1 class="section-title">Me</h1>
+        <div class="me">
+          <img src="img/me.jpg" alt="" />
+          <p class="small">
+            ``I got a captcha wrong once, so now I'm a robot``. <br />
+            Hi, my name is Hamza but my friends love's to call me
+            <a href="javascript:;">TOPO</a>,I am a 28-year-old full-stack
+            developer from Morocco. I specialize in Laravel, Livewire, and
+            AlpineJS. I fell in love with PHP and Laravel when I was 24. When
+            I'm not coding, I enjoy exploring topics such as rap music,
+            religion, red pill philosophy, and tuffting.
+          </p>
+        </div>
+      </section>
+      <section id="projects">
+        <div class="items">
+          <div class="item" onclick="read('articl-1')">
+            <div class="item-header">
+
             </div>
-            <div class="item" onclick="openProject('https://sherin.ma/')">
-              <div class="item-header">
-                Technologies : Laravel 7 | PHP 7.4 | MYSQL
-              </div>
-              <svg preserveAspectRatio="xMidYMid slice" viewBox="0 0 300 200">
-                <defs>
-                  <clipPath id="clip-1">
-                    <circle cx="0" cy="0" fill="#000" r="150px"></circle>
-                  </clipPath>
-                </defs>
-                <text class="svg-text" dy=".3em" x="50%" y="50%">SHERIN</text>
-                <g clip-path="url(#clip-1)">
-                  <image
-                    height="100%"
-                    preserveAspectRatio="xMinYMin slice"
-                    width="100%"
-                    xlink:href="img/sherin.png"
-                  ></image>
-                  <text class="svg-masked-text" dy=".3em" x="50%" y="50%">
-                    SHERIN
-                  </text>
-                </g>
-              </svg>
-            </div>
-            <div
-              class="item"
-              onclick="openProject('https://www.greenwatech.com/')"
-            >
-              <div class="item-header">
-                Technologies : Laravel 6 | PHP 7 | MYSQL
-              </div>
-              <svg preserveAspectRatio="xMidYMid slice" viewBox="0 0 300 200">
-                <defs>
-                  <clipPath id="clip-2">
-                    <circle cx="0" cy="0" fill="#000" r="150px"></circle>
-                  </clipPath>
-                </defs>
-                <text class="svg-text" dy=".3em" x="50%" y="50%">
-                  GREENWATECH
+            <svg preserveAspectRatio="xMidYMid slice" viewBox="0 0 300 200">
+              <defs>
+                <clipPath id="clip-0">
+                  <circle cx="0" cy="0" fill="#000" r="150px"></circle>
+                </clipPath>
+              </defs>
+              <text class="svg-text" dy=".3em" x="50%" y="50%">Laravel Observers</text>
+              <g clip-path="url(#clip-0)">
+                <image height="100%" preserveAspectRatio="xMinYMin slice" width="100%" xlink:href="img/laravel.png">
+                </image>
+                <text class="svg-masked-text" dy=".3em" x="50%" y="50%">
                 </text>
-                <g clip-path="url(#clip-2)">
-                  <image
-                    height="100%"
-                    preserveAspectRatio="xMinYMin slice"
-                    width="100%"
-                    xlink:href="img/greenwatech.png"
-                  ></image>
-                  <text class="svg-masked-text" dy=".3em" x="50%" y="50%">
-                    GREENWATECH
-                  </text>
-                </g>
-              </svg>
-            </div>
-            <div class="item" onclick="openProject('http://cnph.kechweb.com/')">
-              <div class="item-header">
-                Technologies : Laravel 8 | MYSQL | LIVEWIRE
-              </div>
-              <svg preserveAspectRatio="xMidYMid slice" viewBox="0 0 300 200">
-                <defs>
-                  <clipPath id="clip-3">
-                    <circle cx="0" cy="0" fill="#000" r="150px"></circle>
-                  </clipPath>
-                </defs>
-                <text class="svg-text" dy=".3em" x="50%" y="50%">CNPH</text>
-                <g clip-path="url(#clip-3)">
-                  <image
-                    height="100%"
-                    preserveAspectRatio="xMinYMin slice"
-                    width="100%"
-                    xlink:href="img/cnph.png"
-                  ></image>
-                  <text class="svg-masked-text" dy=".3em" x="50%" y="50%">
-                    CNPH
-                  </text>
-                </g>
-              </svg>
-            </div>
+              </g>
+            </svg>
           </div>
-        </section>
-        <section id="work-with-me">
-          <h1 class="section-title">Let's work together</h1>
-          <p class="small">As a freelancer, I offer the following services:</p>
-          <br />
+          <div class="item" onclick="read('articl-2')">
+            <div class="item-header">
 
-          <div class="services">
-            <div class="item-service">
-              <div class="service">1</div>
-              Website development and design
             </div>
-            <div class="item-service">
-              <div class="service">2</div>
-              Website hosting and deployment
-            </div>
-            <div class="item-service">
-              <div class="service">2</div>
-              High-performance SAAS web application creation
-            </div>
-            <div class="item-service">
-              <div class="service">2</div>
-              API development
-            </div>
-            <div class="item-service">
-              <div class="service">2</div>
-              Graphic design for branding materials such as logos, flyers,
-              posters, and business cards.
-            </div>
+            <svg preserveAspectRatio="xMidYMid slice" viewBox="0 0 300 200">
+              <defs>
+                <clipPath id="clip-1">
+                  <circle cx="0" cy="0" fill="#000" r="150px"></circle>
+                </clipPath>
+              </defs>
+              <text class="svg-text" dy=".3em" x="50%" y="50%">PHP 8</text>
+              <g clip-path="url(#clip-1)">
+                <image height="100%" preserveAspectRatio="xMinYMin slice" width="100%" xlink:href="img/php.png"></image>
+                <text class="svg-masked-text" dy=".3em" x="50%" y="50%">
+
+                </text>
+              </g>
+            </svg>
           </div>
-          <div class="me">
-            <p class="small">
-              If you are interested in hiring me, please reach out to me via my
-              social media or by emailing me at
-              <a href="javascript:;">hamzaaitsidisaid.11@gmail.com</a>.
-            </p>
+          <div class="item" onclick="read('articl-3')">
+            <div class="item-header">
+
+            </div>
+            <svg preserveAspectRatio="xMidYMid slice" viewBox="0 0 300 200">
+              <defs>
+                <clipPath id="clip-2">
+                  <circle cx="0" cy="0" fill="#000" r="150px"></circle>
+                </clipPath>
+              </defs>
+              <text class="svg-text" dy=".3em" x="50%" y="50%">PUSHER</text>
+              <g clip-path="url(#clip-2)">
+                <image height="100%" preserveAspectRatio="xMinYMin slice" width="100%" xlink:href="img/pusher.png">
+                </image>
+                <text class="svg-masked-text" dy=".3em" x="50%" y="50%">
+
+                </text>
+              </g>
+            </svg>
           </div>
-        </section>
-      </main>
+        </div>
+      </section>
+      <section id="blogs">
+        <h1 class="section-title">Read This</h1>
+        <div id="articl-1" class="article">
+          <header>
+            <h1>Implementing Observers in Laravel</h1>
+            <p>By <span class="author">Hamza Ait Sidi Said</span></p>
+          </header>
+          <article>
+            <!-- Main content of the article -->
+            <p>Laravel, a powerful PHP framework, provides developers with various tools and features to streamline the
+              development process. One such feature is the Observer pattern, which allows you to decouple different
+              parts of your application, making it more modular and maintainable.</p>
+
+            <section>
+              <h2>Understanding Observers</h2>
+              <p>In Laravel, observers are classes that listen for specific events that occur in your Eloquent models.
+                These events can include creating, updating, deleting, and other model-related actions. By using
+                observers, you can perform additional tasks or actions in response to these events without cluttering
+                your models with unnecessary logic.</p>
+            </section>
+            <section>
+              <h2>Creating an Observer</h2>
+              <p>To create an observer in Laravel, start by generating a new observer class. You can use the following
+                artisan command:</p>
+              <pre><code>php artisan make:observer MyObserver</code></pre>
+              <p>This command will create a new observer class named <code>MyObserver</code> in the
+                <code>App/Observers</code> directory.
+              </p>
+              <p>Open the generated observer class and define the methods for the events you want to observe. For
+                example:</p>
+              <pre><code>php
+  class MyObserver
+  {
+      public function creating(Model $model)
+      {
+          // Logic to perform when a model is being created
+      }
+  
+      public function updating(Model $model)
+      {
+          // Logic to perform when a model is being updated
+      }
+  
+      // Other event methods can be added as needed
+  }
+  </code></pre>
+            </section>
+            <section>
+              <h2>Registering an Observer</h2>
+              <p>Once you've created your observer, you need to register it with the model you want to observe. You can
+                do this by adding the observer to the model's <code>observe</code> array:</p>
+              <pre><code>php
+  class YourModel extends Model
+  {
+      protected $dispatchesEvents = [
+          'creating' => YourModelCreating::class,
+          'updating' => YourModelUpdating::class,
+          // Other model events can be added as needed
+      ];
+  }
+  </code></pre>
+              <p>With this setup, the specified observer will now listen for the defined events on the
+                <code>YourModel</code> model.
+              </p>
+            </section>
+            <!-- Conclusion -->
+            <section>
+              <h2>Conclusion</h2>
+              <p>Observers in Laravel provide a clean and organized way to handle model events. By separating the logic
+                related to events into observer classes, you can keep your models focused on representing data and
+                improve the overall maintainability of your Laravel applications.</p>
+            </section>
+          </article>
+          <footer>
+            <!-- Optional: Footer content such as publication date, tags, etc. -->
+            <p>Published on <time datetime="2023-08-15">August 15, 2023</time></p>
+            <!-- Additional footer content can go here -->
+          </footer>
+        </div>
+        <div id="articl-2" class="article">
+          <header>
+            <h1>Deploying Your Laravel Application on Heroku</h1>
+            <p>By <span class="author">Hamza Ait Sidi Said</span></p>
+          </header>
+
+          <article>
+            <p>Heroku makes it easy to deploy and manage Laravel applications in a cloud environment. In this guide,
+              we'll walk through the steps to deploy your Laravel app on Heroku using the Heroku Command Line Interface
+              (CLI).</p>
+
+            <section>
+              <h2>Prerequisites</h2>
+              <p>Before you begin, ensure you have the following:</p>
+              <ul>
+                <li>A Heroku account (sign up at <a href="https://signup.heroku.com/" target="_blank"
+                    rel="noopener noreferrer">Heroku Sign Up</a>).</li>
+                <li>Heroku CLI installed (download it from <a href="https://devcenter.heroku.com/articles/heroku-cli"
+                    target="_blank" rel="noopener noreferrer">Heroku CLI</a>).</li>
+                <li>Your Laravel application code hosted on a version control system (e.g., Git).</li>
+              </ul>
+            </section>
+
+            <section>
+              <h2>Deployment Steps</h2>
+              <p>Follow these steps to deploy your Laravel application on Heroku:</p>
+              <ol>
+                <li><strong>Create a Heroku App:</strong> In your terminal, navigate to your Laravel project directory
+                  and run the following command to create a new Heroku app:</li>
+                <pre><code>heroku create your-app-name</code></pre>
+
+                <li><strong>Configure Environment Variables:</strong> If your Laravel app uses environment variables
+                  (e.g., for database credentials), set them on Heroku:</li>
+                <pre><code>heroku config:set APP_KEY=$(php artisan --no-ansi key:generate --show)</code></pre>
+                <p>Replace <code>your-app-name</code> with your desired app name.</p>
+
+                <li><strong>Set the Application Environment:</strong> Set the environment to production on Heroku:</li>
+                <pre><code>heroku config:set APP_ENV=production</code></pre>
+
+                <li><strong>Add a Procfile:</strong> Create a file named <code>Procfile</code> (without any file
+                  extension) in your Laravel project root with the following content:</li>
+                <pre><code>web: vendor/bin/heroku-php-apache2 public/</code></pre>
+
+                <li><strong>Commit Your Changes:</strong> Make sure your changes are committed to your version control
+                  system (e.g., Git).</li>
+
+                <li><strong>Deploy Your Application:</strong> Deploy your Laravel application to Heroku:</li>
+                <pre><code>git push heroku master</code></pre>
+
+                <li><strong>Run Migrations:</strong> Run database migrations on Heroku:</li>
+                <pre><code>heroku run php artisan migrate</code></pre>
+
+                <li><strong>Open Your App:</strong> Once the deployment is complete, open your app in the browser:</li>
+                <pre><code>heroku open</code></pre>
+              </ol>
+            </section>
+
+            <section>
+              <h2>Conclusion</h2>
+              <p>Congratulations! Your Laravel application is now live on Heroku. Heroku's simplicity and scalability
+                make it an excellent choice for hosting and managing your Laravel projects in a cloud environment.</p>
+            </section>
+          </article>
+          <footer>
+            <p>Published on <time datetime="2023-11-15">November 15, 2023</time></p>
+            <p>Tags: <a href="#">Heroku</a>, <a href="#">Laravel</a>, <a href="#">Deployment</a></p>
+          </footer>
+
+        </div>
+        <div id="articl-3" class="article">
+          <header>
+            <h1>Real-Time Communication with Pusher WebSocket and Laravel</h1>
+            <p>By <span class="author">Hamza Ait Sidi Said</span></p>
+          </header>
+          <article>
+            <p>Real-time communication has become a crucial aspect of modern web applications. Laravel, a powerful PHP
+              framework, makes it easy to integrate real-time features using Pusher, a hosted WebSocket service. In this
+              tutorial, we'll explore the steps to set up and use Pusher WebSocket with a Laravel application.</p>
+
+            <section>
+              <h2>Prerequisites</h2>
+              <p>Before you begin, ensure you have the following:</p>
+              <ul>
+                <li>A Laravel project set up and running.</li>
+                <li>A Pusher account (sign up at <a href="https://pusher.com/" target="_blank"
+                    rel="noopener noreferrer">Pusher</a>).</li>
+              </ul>
+            </section>
+
+            <section>
+              <h2>Setting Up Pusher in Laravel</h2>
+              <p>Follow these steps to integrate Pusher with your Laravel application:</p>
+              <ol>
+                <li><strong>Install the Pusher PHP Library:</strong> Run the following command in your terminal:</li>
+                <pre><code>composer require pusher/pusher-php-server</code></pre>
+
+                <li><strong>Configure Pusher Credentials:</strong> Add your Pusher credentials to the <code>.env</code>
+                  file:</li>
+                <pre><code>PUSHER_APP_ID=your-app-id
+  PUSHER_APP_KEY=your-app-key
+  PUSHER_APP_SECRET=your-app-secret
+  PUSHER_APP_CLUSTER=your-app-cluster</code></pre>
+
+                <li><strong>Install Laravel Echo and Pusher JavaScript SDK:</strong> Run the following commands:</li>
+                <pre><code>npm install --save laravel-echo pusher-js</code></pre>
+
+                <li><strong>Configure Broadcasting:</strong> Set the broadcasting driver to Pusher in the
+                  <code>config/broadcasting.php</code> file:
+                </li>
+                <pre><code>'default' => env('BROADCAST_DRIVER', 'pusher'),</code></pre>
+
+                <li><strong>Create an Event:</strong> Generate an event using the artisan command:</li>
+                <pre><code>php artisan make:event YourEvent</code></pre>
+
+                <li><strong>Update Event Logic:</strong> Open the generated event file in
+                  <code>app/Events/YourEvent.php</code> and define the logic to broadcast:
+                </li>
+                <pre><code>public function broadcastOn()
+  {
+      return new Channel('your-channel');
+  }</code></pre>
+
+                <li><strong>Broadcast the Event:</strong> Trigger the event where needed in your application:</li>
+                <pre><code>event(new YourEvent($data));</code></pre>
+              </ol>
+            </section>
+
+            <section>
+              <h2>Listening to Events with Laravel Echo</h2>
+              <p>Use Laravel Echo to listen to events on the client side:</p>
+              <ol>
+                <li><strong>Install Laravel Echo and Pusher JavaScript SDK:</strong> If not done already, run the
+                  following commands:</li>
+                <pre><code>npm install --save laravel-echo pusher-js</code></pre>
+
+                <li><strong>Configure Laravel Echo:</strong> In your JavaScript file (e.g.,
+                  <code>resources/js/bootstrap.js</code>), configure Laravel Echo:
+                </li>
+                <pre><code>import Echo from 'laravel-echo';
+  
+  window.Pusher = require('pusher-js');
+  
+  window.Echo = new Echo({
+      broadcaster: 'pusher',
+      key: process.env.MIX_PUSHER_APP_KEY,
+      cluster: process.env.MIX_PUSHER_APP_CLUSTER,
+      forceTLS: true,
+  });</code></pre>
+
+                <li><strong>Listen for Events:</strong> In your Vue component or JavaScript file, listen for the events:
+                </li>
+                <pre><code>mounted() {
+      Echo.channel('your-channel')
+          .listen('YourEvent', (data) => {
+              console.log('Event received:', data);
+              // Handle the event data as needed
+          });
+  }</code></pre>
+              </ol>
+            </section>
+
+            <section>
+              <h2>Conclusion</h2>
+              <p>Congratulations! You've successfully set up Pusher WebSocket with your Laravel application. Real-time
+                communication opens up possibilities for interactive and dynamic user experiences in your web
+                applications.</p>
+            </section>
+          </article>
+
+          <footer>
+            <p>Published on <time datetime="2023-11-15">November 15, 2023</time></p>
+            <p>Tags: <a href="#">Laravel</a>, <a href="#">Pusher</a>, <a href="#">WebSocket</a></p>
+          </footer>
+
+        </div>
+      </section>
+    </main>
+  </div>
+  <div class="options">
+    <div>
+      <span id="dark" class="material-icons" onclick="mode(0)">dark_mode</span>
+      <span id="light" class="material-icons" onclick="mode(1)">light_mode</span>
     </div>
-    <div class="options">
-      <div>
-        <span id="dark" class="material-icons" onclick="mode(0)"
-          >dark_mode</span
-        >
-        <span id="light" class="material-icons" onclick="mode(1)"
-          >light_mode</span
-        >
-      </div>
 
-      <a href="https://twitter.com/topo444042922" target="_blank">twitter</a>
-      <a href="https://github.com/hamza-topo" target="_blank">github</a>
-      <a
-        href="https://www.linkedin.com/in/hamza-hamza-a2ab1a24b/"
-        target="_blank"
-        >linkedin</a
-      >
-    </div>
-    <footer>
-      <p>
-        Made with <a href="javascript:;"> ❤</a>&nbsp; TOPO
-        <a href="javascript:;">2023.</a>
-      </p>
-    </footer>
-  </body>
-  <script src="app.js"></script>
-  <!-- Google tag (gtag.js) -->
-  <script
-    async
-    src="https://www.googletagmanager.com/gtag/js?id=G-BHXD6PQCS7"
-  ></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    gtag("js", new Date());
+    <a href="https://twitter.com/topo444042922" target="_blank">twitter</a>
+    <a href="https://github.com/hamza-topo" target="_blank">github</a>
+    <a href="https://www.linkedin.com/in/hamza-hamza-a2ab1a24b/" target="_blank">linkedin</a>
+  </div>
+  <footer>
+    <p>
+      Made with <a href="javascript:;"> ❤</a>&nbsp; TOPO
+      <a href="javascript:;">2023.</a>
+    </p>
+  </footer>
 
-    gtag("config", "G-BHXD6PQCS7");
-  </script>
+</body>
+<script src="app.js"></script>
+
 </html>

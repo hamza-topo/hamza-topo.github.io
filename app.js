@@ -70,6 +70,14 @@ function mode(mode) {
   }
 }
 
-function openProject(url) {
-  window.open(url, "_blank");
+function read(articleId) {
+
+  document.getElementById('blogs').style.display = "block";
+  var articles = document.getElementsByClassName('article');
+  for (var i = 0; i < articles.length; i++) {
+    var el =  document.getElementById(articles[i].id);
+    el.style.display = 'none';
+  }
+  document.getElementById(articleId).style.display = "block";
+
 }

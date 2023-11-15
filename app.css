@@ -1,6 +1,6 @@
 * {
   margin: 0;
-  box-sizing: border-box;
+  /* box-sizing: border-box; */
 }
 
 :root {
@@ -37,14 +37,14 @@ p {
 
 .small {
   font-size: 1rem;
-  margin-top: 1em;
-  text-align: start;
+  /* margin-top: 1em;
+  text-align: start; */
 }
 
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 4rem 2rem;
+  padding: 0rem 2rem;
 }
 
 header {
@@ -52,9 +52,31 @@ header {
   padding-bottom: 3rem;
 }
 
+#blogs {
+  display: none;
+}
+
+.article {
+  display: none;
+}
+
 section {
   margin-top: 5%;
+  margin-bottom: 5%;
 }
+
+code {
+  display: inline-block;
+  padding: 0.2em 0.5em;
+  margin: 0;
+  font-size: 90%;
+  color: rgba(245, 245, 245, 0.5);
+  background-color: #3e3e3e;
+  border: 1px solid #1abc89;
+  border-radius: 4px;
+  font-family: 'Courier New', monospace;
+}
+
 
 .nav {
   display: flex;
@@ -76,7 +98,7 @@ section {
 .me img {
   width: 75px;
   height: 75px;
-  border-radius: 15px;
+  border-radius: 4%;
 }
 .nav-items {
   list-style-type: none;
