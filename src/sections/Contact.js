@@ -1,6 +1,6 @@
 import React, { useState }  from 'react';
 
-export function Contact() {
+export default function Contact() {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
@@ -14,7 +14,7 @@ export function Contact() {
         };
     return (
         <div className='component'>
-            <form id="contact-form" onSubmit={handleSubmit}>
+            {/* <form id="contact-form" onSubmit={handleSubmit}>
                 <h3>Contact Form</h3>
                 <fieldset>
                     <label htmlFor="name">Name:</label>
@@ -55,7 +55,7 @@ export function Contact() {
                 <fieldset className='center'>
                     <button type="submit" className='btn-center'>Submit</button>
                 </fieldset>
-            </form>
+            </form> */}
         </div>
 
     )

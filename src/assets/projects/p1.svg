@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Task Manager API logo">
+  <path d="M190 210L256 256L322 210" fill="none" stroke="#0F172A" stroke-width="24" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="190" cy="210" r="34" fill="#ffffff" stroke="#0F172A" stroke-width="18"/>
+  <circle cx="322" cy="210" r="34" fill="#ffffff" stroke="#0F172A" stroke-width="18"/>
+  <circle cx="256" cy="256" r="54" fill="#22C55E" stroke="#0F172A" stroke-width="18"/>
+  <path d="M238 258l14 14 28-36" fill="none" stroke="#0F172A" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

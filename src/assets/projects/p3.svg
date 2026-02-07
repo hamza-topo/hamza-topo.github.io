@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Website redesign icon">
+  <!-- Browser frame -->
+  <rect x="88" y="96" width="336" height="320" rx="36" fill="#FFFFFF" stroke="#0F172A" stroke-width="20"/>
+  <rect x="88" y="96" width="336" height="64" rx="36" fill="#FFFFFF" stroke="#0F172A" stroke-width="20"/>
+  <circle cx="132" cy="128" r="10" fill="#0F172A"/>
+  <circle cx="164" cy="128" r="10" fill="#0F172A"/>
+  <circle cx="196" cy="128" r="10" fill="#0F172A"/>
+
+  <!-- Content lines -->
+  <rect x="132" y="196" width="248" height="18" rx="9" fill="#0F172A" opacity="0.18"/>
+  <rect x="132" y="232" width="200" height="18" rx="9" fill="#0F172A" opacity="0.18"/>
+  <rect x="132" y="268" width="224" height="18" rx="9" fill="#0F172A" opacity="0.18"/>
+
+  <!-- Redesign refresh arrow -->
+  <path d="M320 328c-20 22-52 28-78 14-33-18-46-60-28-93 18-33 60-46 93-28 8 4 14 9 20 15"
+        fill="none" stroke="#22C55E" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M364 210v52h-52" fill="none" stroke="#22C55E" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

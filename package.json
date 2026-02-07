@@ -1,7 +1,7 @@
 {
-  "homepage": "https://hamza-topo.github.io/me",
-  "name": "toto",
-  "version": "0.1.0",
+  "homepage": ".",
+  "name": "Hamza AIT-SIDI-SAID",
+  "version": "0.2.0",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
