@@ -1,6 +1,7 @@
 import React from 'react';
 import "./App.css";
 import Hero from './sections/Hero';
+import Timeline from './sections/Timeline';
 import Skills from './sections/Skills';
 import Toolbox from './sections/Toolbox';
 import Projects from './sections/Projects';
@@ -17,11 +18,10 @@ export default function App() {
       </header>
       <main className="sections">
         <Hero />
+        <Timeline />
         <Toolbox />
         <Skills />
         <Footer version={APP_VERSION} author={APP_AUTHOR} />
-        {/* <Social /> */}
-        {/* <Contact /> */}
       </main>
     </div>
   );

@@ -48,7 +48,6 @@ export default function Blogs() {
   return (
     <section className="blogs" id="blogs">
       <header className="blogsHeader">
-        <h2 className="blogsTitle">blogs.</h2>
         <p className="blogsSub">short reads. practical. production-aware.</p>
       </header>
 
