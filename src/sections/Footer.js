@@ -55,7 +55,11 @@ export default function Footer(props) {
       </div>
 
       <div className="footerMeta">
-        <span>© {year} Hamza Ait Sidi Said</span>
+        <span>© {year} / {props.author ? (
+          <>
+            <span>{props.author}</span>
+          </>
+        ) : null}</span>
         <span className="footerDot">•</span>
         <span>Updated {lastUpdate}</span>
 
