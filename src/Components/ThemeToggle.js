@@ -24,9 +24,11 @@ export default function ThemeToggle() {
 
     if (next) {
       document.body.classList.add("dark");
+      document.body.dataset.theme = "dark";
       localStorage.setItem("theme", "dark");
     } else {
       document.body.classList.remove("dark");
+      document.body.dataset.theme = "light";
       localStorage.setItem("theme", "light");
     }
   };

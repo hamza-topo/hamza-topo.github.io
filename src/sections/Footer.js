@@ -9,7 +9,7 @@ const LINKS = [
   },
   {
     name: "Twitter",
-    href: "https://twitter.com/your-handle",
+    href: "https://x.com/topo444042922",
     icon: "𝕏",
   },
   {
