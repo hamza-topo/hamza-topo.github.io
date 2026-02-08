@@ -1,24 +1,61 @@
-.toolboxHeader{
+.toolboxHeader {
   display: grid;
   gap: 10px;
   margin-bottom: 18px;
 }
 
-.toolboxGrid{
+.toolboxGrid {
   display: grid;
-  grid-template-columns: repeat(8, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 14px;
 }
 
-
-.toolboxFilters{
-  display: flex;
-  gap: 8px;
-  flex-wrap: wrap;
-  margin-top: 6px;
+@media (min-width: 480px) {
+  .toolboxGrid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
 }
 
-.filterBtn{
+@media (min-width: 768px) {
+  .toolboxGrid {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1100px) {
+  .toolboxGrid {
+    grid-template-columns: repeat(8, minmax(0, 1fr));
+  }
+}
+
+.toolboxFilters {
+  display: flex;
+  gap: 8px;
+  margin-top: 6px;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 6px;
+  scrollbar-width: none;
+}
+
+@media (min-width: 820px) {
+  .toolboxFilters {
+    flex-wrap: wrap;
+    overflow-x: visible;
+    padding-bottom: 0;
+  }
+}
+
+.toolboxFilters::-webkit-scrollbar {
+  display: none;
+}
+
+.filterBtn {
+  flex: 0 0 auto;
+}
+
+.filterBtn {
   height: 34px;
   padding: 0 12px;
   border-radius: 999px;
@@ -31,7 +68,7 @@
   opacity: 0.85;
 }
 
-.filterBtn.isActive{
+.filterBtn.isActive {
   background: var(--text);
   color: var(--bg);
   opacity: 1;
@@ -41,29 +78,33 @@
   display: grid;
   grid-template-rows: 1fr auto;
   align-items: center;
-
-  height: 110px; /* adjust if you want taller cards */
+  position: relative;
+  isolation: isolate;
+  height: 110px;
+  /* adjust if you want taller cards */
   border-radius: 14px;
   background: var(--card);
   border: 1px solid var(--border);
 
-  overflow: hidden; /* IMPORTANT */
+  overflow: hidden;
+  /* IMPORTANT */
   transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
 
-.toolCard:hover{
+
+.toolCard:hover {
   transform: translateY(-2px);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
 }
 
-.toolCard img{
+.toolCard img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   opacity: 0.9;
 }
 
-.toolCard span{
+.toolCard span {
   display: grid;
   place-items: center;
   font-size: 12px;
@@ -71,7 +112,7 @@
   opacity: 0.9;
   padding: 6px 10px;
   text-align: center;
-  border-top: 1px solid rgba(255,255,255,0.06);
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
 }
 
 .toolIcon {
@@ -82,6 +123,71 @@
   font-size: 25px;
 }
 
-body.dark .toolCard img{
+body.dark .toolCard img {
   filter: grayscale(1) brightness(1.15);
+}
+
+.neon-runner {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  /* keep glow inside corners */
+}
+
+/* base border */
+.neon-runner::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  border: 1px solid rgba(255, 255, 255, .10);
+  pointer-events: none;
+}
+
+/* the moving neon "runner" */
+.neon-runner::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  /* slightly outside for glow */
+  border-radius: inherit;
+  padding: 2px;
+  /* border thickness */
+  pointer-events: none;
+
+  /* ONE bright segment + rest transparent */
+  background: conic-gradient(from 0deg,
+      transparent 0deg,
+      transparent 320deg,
+      rgba(56, 189, 248, 0.0) 320deg,
+      rgba(56, 189, 248, 1) 340deg,
+      /* neon segment */
+      rgba(34, 197, 94, 1) 350deg,
+      /* little color shift */
+      transparent 360deg);
+
+  /* show only the border ring (mask out the center) */
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+
+  /* glow */
+  filter: drop-shadow(0 0 10px rgba(56, 189, 248, .75)) drop-shadow(0 0 18px rgba(34, 197, 94, .45));
+
+  opacity: 0;
+  transition: opacity .2s ease;
+}
+
+/* animate ONLY while hovering */
+.neon-runner:hover::before {
+  opacity: 1;
+  animation: neon-rotate 1.2s linear infinite;
+}
+
+@keyframes neon-rotate {
+  to {
+    transform: rotate(360deg);
+  }
 }

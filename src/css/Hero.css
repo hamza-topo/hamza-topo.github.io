@@ -1,9 +1,16 @@
 /* ===== HERO WRAPPER ===== */
 .hero{
-  min-height: 85vh;
   display: flex;
   align-items: center;
   padding: 0 20px;
+  min-height: clamp(520px, 80vh, 760px);
+}
+
+@media (max-width: 900px){
+  .hero{
+    min-height: auto;
+    padding: 18px 14px;
+  }
 }
 
 /* ===== ONE CARD ===== */
@@ -117,6 +124,7 @@
 
   .heroVisual{
     order: -1; /* image on top */
+     margin-bottom: 6px;
   }
 
   .heroVisual img{
