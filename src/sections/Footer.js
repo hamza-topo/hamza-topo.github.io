@@ -5,17 +5,17 @@ const LINKS = [
   {
     name: "LinkedIn",
     href: "https://www.linkedin.com/in/hamza-ait-sidi-said/",
-    icon: "in",
+    icon: '<i class="devicon-linkedin-plain"></i>',
   },
   {
     name: "Twitter",
     href: "https://x.com/topo444042922",
-    icon: "𝕏",
+    icon: "<i class='devicon-twitter-original'></i>",
   },
   {
     name: "GitHub",
     href: "https://github.com/hamza-topo/",
-    icon: "GH",
+    icon: '<i class="devicon-github-original"></i>',
   },
 ];
 
@@ -41,7 +41,14 @@ export default function Footer(props) {
               aria-label={l.name}
               title={l.name}
             >
-              <span className="footerIcon">{l.icon}</span>
+              {l.icon ? (
+              <div
+                className="toolIcon"
+                dangerouslySetInnerHTML={{ __html: l.icon }}
+              />
+            ) : (
+              <img src={l.logo} alt={l.name} loading="lazy" />
+            )}
             </a>
           );
         })}

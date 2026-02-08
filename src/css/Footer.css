@@ -1,6 +1,7 @@
-.footer{
+.footer {
   margin-top: 70px;
-  padding: 26px 0 calc(34px + env(safe-area-inset-bottom)); /* ✅ important */
+  padding: 26px 0 calc(34px + env(safe-area-inset-bottom));
+  /* ✅ important */
   border-top: 1px solid var(--border);
 
   width: 100%;
@@ -10,7 +11,7 @@
 }
 
 /* icons row stays centered */
-.footerIcons{
+.footerIcons {
   display: flex;
   gap: 12px;
   justify-content: center;
@@ -18,12 +19,27 @@
   flex-wrap: nowrap;
 }
 
+/* remove default blue link styling in footer */
+.footer a {
+  color: inherit;
+  /* use footer text color */
+  text-decoration: none;
+  /* remove underline */
+}
+
+/* optional: subtle hover feedback */
+.footer a:hover {
+  opacity: 0.9;
+}
+
 /* ✅ meta must never overflow on mobile */
-.footerMeta{
+.footerMeta {
   max-width: 100%;
-  padding: 0 12px;            /* ✅ prevent edge clipping */
+  padding: 0 12px;
+  /* ✅ prevent edge clipping */
   display: flex;
-  flex-wrap: wrap;            /* ✅ wrap on small screens */
+  flex-wrap: wrap;
+  /* ✅ wrap on small screens */
   justify-content: center;
   align-items: center;
   gap: 8px;
@@ -32,20 +48,22 @@
   font-size: 12px;
   line-height: 1.4;
   text-align: center;
-  word-break: break-word;     /* ✅ safety */
+  word-break: break-word;
+  /* ✅ safety */
 }
 
-.footerDot{
+.footerDot {
   opacity: .55;
 }
 
 /* optional: slightly smaller on very small screens */
-@media (max-width: 420px){
-  .footerIconBtn{
+@media (max-width: 420px) {
+  .footerIconBtn {
     width: 40px;
     height: 40px;
   }
-  .footerMeta{
+
+  .footerMeta {
     font-size: 11px;
   }
 }
