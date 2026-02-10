@@ -19,9 +19,8 @@ export default function Hero() {
             </h1>
 
             <p className="heroSub">
-              I code for <strong>money</strong> first — and still enjoy it.
-              I work on real projects, deal with legacy and constraints,
-              and ship maintainable systems that survive production.
+              I work on <strong>real-world projects</strong>, deal with legacy systems and constraints,
+              and focus on shipping maintainable, production-ready solutions.
             </p>
           </div>
         </div>
