@@ -9,7 +9,10 @@ export default function Timeline() {
       <header className="timelineHeader">
         <p className="timelineSub">Experience. impact. shipped work.</p>
       </header>
-
+      <div className="timelineContainer">
+        <a href="/CV_2026-02-10_AIT-SIDI-SAID_HAMZA.pdf" download className="timelineTitle">
+        </a>
+      </div>
       <div className="timelineTrack" aria-label="Work experience timeline">
         {timeline.map(function (exp, idx) {
           const side = idx % 2 === 0 ? "left" : "right";

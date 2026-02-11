@@ -12,8 +12,8 @@ export default function Toolbox() {
 
   return (
     <section className="toolbox" id="toolbox">
-      <header className="toolboxHeader">
         <p className="toolboxSub">Tools I use to ship real systems.</p>
+      <header className="toolboxHeader">
         <div className="toolboxFilters">
           {groups.map((g) => (
             <button
