@@ -1,0 +1,46 @@
+// ==================== SOCIAL SECTION ====================
+
+@import 'variables';
+@import 'mixins';
+
+.social {
+  @include section-spacing;
+}
+
+.socialHeader {
+  margin-bottom: $spacing-xl;
+}
+
+.socialSub {
+  margin-top: $spacing-sm;
+  opacity: 0.85;
+}
+
+.socialIcons {
+  @include flex-center;
+  flex-wrap: wrap;
+  gap: $spacing-md;
+}
+
+.socialIcon {
+  @include flex-center;
+  width: 56px;
+  height: 56px;
+  border-radius: $radius-full;
+  border: 1px solid var(--color-border);
+  background: var(--color-card);
+  color: var(--color-text);
+  text-decoration: none;
+  transition: all $transition-fast;
+  
+  &:hover {
+    background: var(--color-accent);
+    border-color: var(--color-accent);
+    color: white;
+    transform: translateY(-4px);
+  }
+  
+  i {
+    font-size: $font-size-xl;
+  }
+}

@@ -1,0 +1,71 @@
+// ==================== THEME TOGGLE ====================
+
+@import 'variables';
+@import 'mixins';
+
+.themeToggle {
+  @include flex-center;
+  width: 44px;
+  height: 44px;
+  border-radius: $radius-full;
+  border: 1px solid var(--color-border);
+  background: var(--color-card);
+  cursor: pointer;
+  transition: all $transition-normal;
+  
+  &:hover {
+    background: var(--color-border);
+    transform: scale(1.05);
+  }
+  
+  &:focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 2px;
+  }
+  
+  &:active {
+    transform: scale(0.95);
+  }
+}
+
+.lamp {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lampHead {
+  position: relative;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 2px solid var(--color-text);
+  background: transparent;
+  transition: all $transition-normal;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--color-text);
+    transition: all $transition-normal;
+  }
+}
+
+// Dark mode - toggle icon style
+body.dark .lampHead {
+  border-color: var(--color-text);
+  
+  &::before {
+    background: var(--color-accent);
+    box-shadow: 0 0 8px var(--color-accent);
+  }
+}

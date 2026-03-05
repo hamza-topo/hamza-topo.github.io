@@ -1,0 +1,281 @@
+// ============================================
+// SKILLS SECTION
+// ============================================
+
+@import 'variables';
+@import 'mixins';
+
+.skills {
+  width: 100%;
+}
+
+.skillsHeader {
+  margin-bottom: $space-4;
+}
+
+.skillsSub {
+  margin: 0;
+  font-size: $font-lg;
+  font-weight: 700;
+  opacity: 0.85;
+}
+
+// Header Row
+.skillsHeaderRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: $space-3;
+  margin-bottom: $space-3;
+
+  @include tablet {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+// Search
+.blogSearch {
+  position: relative;
+  width: min(400px, 100%);
+
+  @include tablet {
+    width: 100%;
+  }
+}
+
+.blogSearchInput {
+  width: 100%;
+  height: 38px;
+  padding: 0 40px 0 $space-3;
+  border-radius: $radius-md;
+  border: $border-style;
+  background: var(--card);
+  color: var(--text);
+  font-size: $font-base;
+  outline: none;
+  transition: border-color $transition-base, box-shadow $transition-base;
+
+  // Hide native cancel button
+  &::-webkit-search-cancel-button,
+  &::-webkit-search-decoration,
+  &::-webkit-search-results-button,
+  &::-webkit-search-results-decoration {
+    -webkit-appearance: none;
+  }
+
+  &[type='search'] {
+    appearance: none;
+  }
+
+  &::placeholder {
+    opacity: 0.65;
+  }
+
+  &:focus {
+    border-color: var(--text);
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.blogSearchClear {
+  position: absolute;
+  right: $space-2;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 24px;
+  height: 24px;
+  border-radius: $radius-full;
+  border: none;
+  background: transparent;
+  color: var(--text);
+  cursor: pointer;
+  font-size: $font-lg;
+  opacity: 0.7;
+  @include flex-center;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+// Suggestions
+.blogSuggest {
+  position: absolute;
+  top: calc(100% + $space-2);
+  left: 0;
+  right: 0;
+  border-radius: $radius-md;
+  border: $border-style;
+  background: var(--card);
+  overflow: hidden;
+  z-index: 50;
+  box-shadow: $shadow-xl;
+}
+
+.blogSuggestItem {
+  width: 100%;
+  text-align: left;
+  padding: $space-2 $space-3;
+  border: none;
+  background: transparent;
+  color: var(--text);
+  cursor: pointer;
+  font-size: $font-base;
+
+  &:hover,
+  &.isActive {
+    background: var(--bg);
+  }
+}
+
+.blogSearchMeta {
+  margin-top: $space-2;
+  font-size: $font-sm;
+  opacity: 0.75;
+}
+
+// Skills List
+.skillsList {
+  display: grid;
+  gap: $space-3;
+
+  @include tablet {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Blog Banner (Skill Card)
+.blogBanner {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: $space-4;
+  border: $border-style;
+  background: var(--card);
+  border-radius: $radius-lg;
+  overflow: hidden;
+  text-decoration: none;
+  color: var(--text);
+  transition: transform $transition-base, box-shadow $transition-base;
+
+  @include tablet {
+    grid-template-columns: 1fr;
+  }
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: $shadow-lg;
+  }
+
+  // Force no underline
+  &,
+  &:visited,
+  &:hover,
+  &:active {
+    color: var(--text) !important;
+    text-decoration: none !important;
+  }
+
+  * {
+    text-decoration: none !important;
+  }
+}
+
+.blogImgWrap {
+  min-height: 120px;
+  background: rgba(0, 0, 0, 0.03);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @include tablet {
+    min-height: 80px;
+  }
+
+  img {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+  }
+}
+
+.blogContent {
+  padding: $space-3 $space-4 $space-3 0;
+  display: grid;
+  gap: $space-2;
+  align-content: center;
+
+  @include tablet {
+    padding: $space-3;
+  }
+}
+
+.blogTitle {
+  margin: 0;
+  font-size: $font-md;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.blogSubtitle {
+  margin: 0;
+  font-size: $font-sm;
+  opacity: 0.75;
+}
+
+.blogDesc {
+  margin: 0;
+  font-size: $font-base;
+  opacity: 0.85;
+  line-height: 1.5;
+  @include truncate(2);
+}
+
+.blogCta {
+  font-size: $font-sm;
+  font-weight: 700;
+  opacity: 0.9;
+}
+
+.blogCtaHint {
+  font-weight: 500;
+  opacity: 0.55;
+  font-size: $font-xs;
+}
+
+// Pagination
+.blogPager {
+  margin-top: $space-4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: $space-3;
+}
+
+.pagerBtn {
+  height: 34px;
+  padding: 0 $space-3;
+  border-radius: $radius-full;
+  border: $border-style;
+  background: var(--card);
+  color: var(--text);
+  cursor: pointer;
+  font-weight: 700;
+  font-size: $font-sm;
+  transition: all $transition-base;
+
+  &:hover:not(:disabled) {
+    background: var(--text);
+    color: var(--bg);
+  }
+
+  &:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+  }
+}
+
+.pagerInfo {
+  font-size: $font-sm;
+  opacity: 0.8;
+}

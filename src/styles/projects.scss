@@ -1,0 +1,106 @@
+// ==================== PROJECTS SECTION ====================
+
+@import 'variables';
+@import 'mixins';
+
+.projects {
+  @include section-spacing;
+}
+
+.projectsHeader {
+  margin-bottom: $spacing-xl;
+}
+
+.projectsIntro {
+  margin-top: $spacing-sm;
+  opacity: 0.85;
+}
+
+.projectsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: $spacing-xl;
+  
+  @include mobile {
+    grid-template-columns: 1fr;
+  }
+}
+
+.projectCard {
+  background: var(--color-card);
+  border: 1px solid var(--color-border);
+  border-radius: $radius-xl;
+  overflow: hidden;
+  transition: all $transition-normal;
+  
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: $shadow-lg;
+  }
+}
+
+.projectMedia {
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background: var(--color-border);
+  
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform $transition-slow;
+    
+    .projectCard:hover & {
+      transform: scale(1.05);
+    }
+  }
+}
+
+.projectBody {
+  padding: $spacing-lg;
+}
+
+.projectName {
+  margin: 0 0 $spacing-sm;
+  font-size: $font-size-xl;
+  font-weight: $font-weight-bold;
+}
+
+.projectDesc {
+  margin: 0 0 $spacing-md;
+  opacity: 0.85;
+  line-height: $line-height-relaxed;
+}
+
+.projectTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $spacing-sm;
+  margin-bottom: $spacing-md;
+}
+
+.tag {
+  padding: $spacing-xs $spacing-sm;
+  font-size: $font-size-xs;
+  font-weight: $font-weight-medium;
+  background: var(--color-border);
+  border-radius: $radius-sm;
+  opacity: 0.8;
+}
+
+.projectLinks {
+  display: flex;
+  gap: $spacing-sm;
+}
+
+.linkBtn {
+  @include button-ghost;
+  font-size: $font-size-sm;
+  padding: $spacing-xs $spacing-md;
+  
+  &:hover {
+    background: var(--color-accent);
+    color: white;
+    border-color: var(--color-accent);
+  }
+}

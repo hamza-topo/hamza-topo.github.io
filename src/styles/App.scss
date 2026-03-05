@@ -1,0 +1,65 @@
+// ==================== APP LAYOUT ====================
+
+@import 'variables';
+@import 'mixins';
+
+// The main wrapper
+.App {
+  width: 100%;
+  min-height: 100vh;
+}
+
+// Layout sections
+.sections {
+  width: 100%;
+  max-width: $container-max-width;
+  margin: 0 auto;
+  padding-top: 64px;
+  padding-inline: $container-padding;
+  padding-bottom: calc(60px + env(safe-area-inset-bottom));
+  
+  display: flex;
+  flex-direction: column;
+  gap: clamp($spacing-lg, 5vw, $spacing-2xl);
+}
+
+// Section title styling
+.sectionTitle {
+  margin: 0 0 $spacing-md;
+  padding: 0;
+  font-size: clamp($font-size-xl, 4.5vw, $font-size-3xl);
+  line-height: $line-height-tight;
+  letter-spacing: -0.03em;
+  word-break: break-word;
+}
+
+// Top bar
+.topBar {
+  position: fixed;
+  top: $spacing-md;
+  right: $spacing-md;
+  z-index: $z-fixed;
+}
+
+// Mobile adjustments
+@media (max-width: $breakpoint-sm) {
+  .topBar {
+    top: $spacing-sm;
+    right: $spacing-sm;
+  }
+  
+  .sections {
+    padding-top: 56px;
+    gap: $spacing-lg;
+  }
+}
+
+// Smooth page load animation
+.App {
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}

@@ -1,0 +1,92 @@
+// ==================== TIMELINE SECTION ====================
+
+@import 'variables';
+@import 'mixins';
+
+.timeline {
+  @include section-spacing;
+}
+
+.timelineHeader {
+  @include flex-between;
+  flex-wrap: wrap;
+  gap: $spacing-md;
+  margin-bottom: $spacing-xl;
+}
+
+.timelineCtas {
+  display: flex;
+  gap: $spacing-sm;
+}
+
+.timelineList {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-lg;
+}
+
+.timelineItem {
+  position: relative;
+  padding-left: $spacing-xl;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    left: 7px;
+    top: 8px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--color-accent);
+    border: 2px solid var(--color-bg);
+  }
+  
+  &::after {
+    content: '';
+    position: absolute;
+    left: 11px;
+    top: 22px;
+    bottom: -$spacing-lg;
+    width: 2px;
+    background: var(--color-border);
+  }
+  
+  &:last-child::after {
+    display: none;
+  }
+}
+
+.timelineDate {
+  font-size: $font-size-sm;
+  color: var(--color-text-muted);
+  margin-bottom: $spacing-xs;
+}
+
+.timelineTitle {
+  margin: 0 0 $spacing-xs;
+  font-size: $font-size-lg;
+  font-weight: $font-weight-semibold;
+}
+
+.timelineOrg {
+  font-size: $font-size-sm;
+  color: var(--color-accent);
+  margin-bottom: $spacing-sm;
+}
+
+.timelineDesc {
+  margin: 0;
+  opacity: 0.85;
+  line-height: $line-height-relaxed;
+}
+
+// Download button
+.timelineDownload {
+  @include button-ghost;
+  font-size: $font-size-sm;
+  padding: $spacing-xs $spacing-md;
+  
+  i {
+    margin-right: $spacing-xs;
+  }
+}

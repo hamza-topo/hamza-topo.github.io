@@ -1,0 +1,82 @@
+// ============================================
+// FOOTER
+// ============================================
+
+@import 'variables';
+@import 'mixins';
+
+.footer {
+  margin-top: $space-16;
+  padding: $space-6 0 calc($space-8 + env(safe-area-inset-bottom));
+  border-top: $border-style;
+  width: 100%;
+  display: grid;
+  gap: $space-3;
+  justify-items: center;
+}
+
+// Icons Row
+.footerIcons {
+  display: flex;
+  gap: $space-3;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.footer a {
+  @include link-reset;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+// Meta Info
+.footerMeta {
+  max-width: 100%;
+  padding: 0 $space-3;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: $space-2;
+  font-size: $font-sm;
+  line-height: 1.4;
+  text-align: center;
+  word-break: break-word;
+  opacity: 0.8;
+}
+
+.footerDot {
+  opacity: 0.55;
+}
+
+// Footer Icon Button
+.footerIconBtn {
+  width: 40px;
+  height: 40px;
+  @include flex-center;
+  border-radius: $radius-full;
+  border: $border-style;
+  background: var(--card);
+  color: var(--text);
+  transition: all $transition-base;
+
+  &:hover {
+    background: var(--text);
+    color: var(--bg);
+    transform: translateY(-2px);
+  }
+
+  @include mobile {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+.footerMeta {
+  @include mobile {
+    font-size: $font-xs;
+  }
+}

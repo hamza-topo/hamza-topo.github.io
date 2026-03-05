@@ -1,0 +1,77 @@
+// ============================================
+// THEME TOGGLE
+// ============================================
+
+@import 'variables';
+@import 'mixins';
+
+.themeToggle {
+  width: 44px;
+  height: 44px;
+  border-radius: $radius-full;
+  border: $border-style;
+  background: var(--card);
+  cursor: pointer;
+  @include flex-center;
+  transition: transform $transition-fast, box-shadow $transition-base;
+
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: $shadow-lg;
+  }
+}
+
+.lamp {
+  position: relative;
+  width: 18px;
+  height: 22px;
+}
+
+// Bulb
+.lampHead {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 18px;
+  height: 12px;
+  transform: translateX(-50%);
+  border-radius: 10px 10px 6px 6px;
+  background: #facc15;
+  transition: background $transition-base;
+}
+
+// Glow
+.lampGlow {
+  position: absolute;
+  left: 50%;
+  top: 10px;
+  width: 14px;
+  height: 14px;
+  transform: translateX(-50%);
+  border-radius: $radius-full;
+  background: rgba(250, 204, 21, 0.6);
+  filter: blur(4px);
+  transition: background $transition-base;
+}
+
+// Dark mode = light on
+body.dark {
+  .lampHead {
+    background: #fde047;
+  }
+
+  .lampGlow {
+    background: rgba(253, 224, 71, 0.8);
+  }
+}
+
+// Light mode = light off
+body:not(.dark) {
+  .lampHead {
+    background: #64748b;
+  }
+
+  .lampGlow {
+    background: rgba(100, 116, 139, 0.4);
+  }
+}

@@ -1,0 +1,130 @@
+// ============================================
+// CONTACT SECTION
+// ============================================
+
+@import 'variables';
+@import 'mixins';
+
+.contact {
+  width: 100%;
+}
+
+.contactHeader {
+  margin-bottom: $space-6;
+  text-align: center;
+}
+
+.contactTitle {
+  margin: 0 0 $space-2;
+  font-size: clamp($font-2xl, 4vw, $font-4xl);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.contactSubtitle {
+  margin: 0 auto;
+  font-size: $font-base;
+  opacity: 0.85;
+  max-width: 50ch;
+}
+
+// Contact Form
+.contactForm {
+  max-width: 500px;
+  margin: 0 auto;
+  display: grid;
+  gap: $space-4;
+}
+
+.formGroup {
+  display: grid;
+  gap: $space-2;
+}
+
+.formLabel {
+  font-size: $font-sm;
+  font-weight: 600;
+  opacity: 0.9;
+}
+
+.formInput,
+.formTextarea {
+  width: 100%;
+  @include input-base;
+
+  @include mobile {
+    padding: $space-2 $space-3;
+  }
+}
+
+.formTextarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.formSubmit {
+  @include button-base;
+  height: 44px;
+  padding: 0 $space-6;
+  background: var(--text);
+  color: var(--bg);
+  font-size: $font-base;
+}
+
+// Form Messages
+.formMessage {
+  padding: $space-3;
+  border-radius: $radius-md;
+  font-size: $font-sm;
+  text-align: center;
+
+  &.success {
+    background: rgba(34, 197, 94, 0.1);
+    color: #16a34a;
+    border: 1px solid rgba(34, 197, 94, 0.3);
+  }
+
+  &.error {
+    background: rgba(239, 68, 68, 0.1);
+    color: #dc2626;
+    border: 1px solid rgba(239, 68, 68, 0.3);
+  }
+}
+
+// Alternative Contact Methods
+.contactMethods {
+  margin-top: $space-8;
+  display: flex;
+  justify-content: center;
+  gap: $space-4;
+  flex-wrap: wrap;
+
+  @include mobile {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+.contactMethod {
+  display: flex;
+  align-items: center;
+  gap: $space-2;
+  padding: $space-3 $space-4;
+  border-radius: $radius-md;
+  border: $border-style;
+  background: var(--card);
+  color: var(--text);
+  font-size: $font-sm;
+  font-weight: 600;
+  @include link-reset;
+  transition: all $transition-base;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: $shadow-md;
+  }
+
+  i {
+    font-size: $font-lg;
+  }
+}

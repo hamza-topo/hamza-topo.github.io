@@ -1,0 +1,99 @@
+// ============================================
+// TOOLBOX SECTION
+// ============================================
+
+@import 'variables';
+@import 'mixins';
+
+.toolbox {
+  width: 100%;
+}
+
+.toolboxHeader {
+  margin-bottom: $space-4;
+}
+
+.toolboxSub {
+  margin: 0;
+  font-size: clamp(20px, 4vw, 28px);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  opacity: 0.75;
+}
+
+// Filters
+.toolboxFilters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $space-2;
+  margin-top: $space-3;
+}
+
+.filterBtn {
+  height: 32px;
+  padding: 0 12px;
+  border-radius: $radius-full;
+  border: $border-style;
+  background: var(--card);
+  color: var(--text);
+  font-size: $font-sm;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all $transition-base;
+
+  &:hover {
+    background: var(--text);
+    color: var(--bg);
+  }
+
+  &.isActive {
+    background: var(--text);
+    color: var(--bg);
+  }
+}
+
+// Grid
+.toolboxGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: $space-3;
+
+  @include mobile {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: $space-2;
+  }
+}
+
+// Tool Card
+.toolCard {
+  @include flex-center;
+  flex-direction: column;
+  gap: $space-2;
+  padding: $space-4 $space-3;
+  border: $border-style;
+  border-radius: $radius-md;
+  background: var(--card);
+  transition: all $transition-base;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: $shadow-md;
+  }
+
+  img,
+  .toolIcon {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+  }
+
+  span {
+    font-size: $font-sm;
+    font-weight: 600;
+    text-align: center;
+    @include truncate;
+  }
+}

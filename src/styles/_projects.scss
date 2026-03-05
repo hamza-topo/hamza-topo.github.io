@@ -1,0 +1,128 @@
+// ============================================
+// PROJECTS SECTION
+// ============================================
+
+@import 'variables';
+@import 'mixins';
+
+.projects {
+  width: 100%;
+}
+
+.projectsHeader {
+  margin-bottom: $space-4;
+}
+
+.projectsTitle {
+  margin: 0 0 $space-2;
+  font-size: clamp(20px, 4vw, 28px);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.projectsIntro {
+  margin: 0;
+  opacity: 0.85;
+  font-size: $font-base;
+  max-width: 60ch;
+}
+
+// Projects Grid
+.projectsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: $space-5;
+
+  @include mobile {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Project Card
+.projectCard {
+  @include card;
+  overflow: hidden;
+  transition: transform $transition-base, box-shadow $transition-base;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: $shadow-xl;
+  }
+}
+
+// Project Media
+.projectMedia {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background: var(--bg);
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform $transition-slow;
+  }
+
+  .projectCard:hover & img {
+    transform: scale(1.05);
+  }
+}
+
+// Project Body
+.projectBody {
+  padding: $space-4;
+  display: grid;
+  gap: $space-3;
+}
+
+.projectName {
+  margin: 0;
+  font-size: $font-lg;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+}
+
+.projectDesc {
+  margin: 0;
+  font-size: $font-base;
+  line-height: 1.6;
+  opacity: 0.85;
+  @include truncate(3);
+}
+
+// Project Tags
+.projectTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $space-2;
+}
+
+.tag {
+  padding: $space-1 $space-2;
+  border-radius: $radius-sm;
+  background: var(--bg);
+  font-size: $font-xs;
+  font-weight: 600;
+  opacity: 0.8;
+}
+
+// Project Links
+.projectLinks {
+  display: flex;
+  gap: $space-2;
+  margin-top: $space-2;
+}
+
+.linkBtn {
+  @include button-base;
+  padding: 0 $space-3;
+  height: 32px;
+  font-size: $font-sm;
+  background: var(--text);
+  color: var(--bg);
+
+  &:hover {
+    opacity: 0.9;
+  }
+}

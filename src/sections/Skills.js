@@ -3,6 +3,15 @@ import "../css/Skills.css";
 
 const BLOGS_BASE = [
   {
+    published: "2026 03 05",
+    title: "I built a tiny Linux tool that shouts “FAHH 📢” when I type the wrong command",
+    subtitle: "I built a tiny Linux tool that shouts “FAHH” when I type the wrong command",
+    desc:
+      "A few weeks ago I noticed something about the way I work in the terminal.When I’m focused and typing commands fast, I tend to make a lot of small mistakes.",
+    href: "https://dev.to/hamzatopo/i-built-a-tiny-linux-tool-that-shouts-fahh-when-i-type-the-wrong-command-3fio",
+  },
+  {
+    published: "2024 02 06",
     title: "Laravel : DESIGN PATTERN REPOSITORY",
     subtitle: "What it is. Why it matters. How to implement it.",
     desc:
@@ -10,6 +19,7 @@ const BLOGS_BASE = [
     href: "https://dev.to/hamzatopo/laravel-design-pattern-repository-4m7f",
   },
   {
+    published: "2024 09 05",
     title: "React js & Github actions",
     subtitle: "A practical guide to deploying your React app to GitHub Pages.",
     desc:
@@ -252,7 +262,8 @@ export default function Blogs() {
               <p className="blogDesc">{b.desc}</p>
 
               <span className="blogCta">
-                read → <span className="blogCtaHint">opens in new tab</span>
+                read → <span className="blogCtaHint">opens in new tab</span><br></br>
+                published: <span className="blogCtaHint">{b.published}</span>
               </span>
             </div>
           </a>

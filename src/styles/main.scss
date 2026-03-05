@@ -1,0 +1,19 @@
+// ============================================
+// MAIN STYLES ENTRY POINT
+// ============================================
+
+// Base Styles
+@import 'variables';
+@import 'mixins';
+
+// Component Styles
+@import 'App';
+@import 'hero';
+@import 'timeline';
+@import 'toolbox';
+@import 'projects';
+@import 'skills';
+@import 'footer';
+@import 'social';
+@import 'contact';
+@import 'theme-toggle';

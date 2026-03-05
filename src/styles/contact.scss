@@ -1,0 +1,121 @@
+// ==================== CONTACT SECTION ====================
+
+@import 'variables';
+@import 'mixins';
+
+.contact {
+  @include section-spacing;
+}
+
+.contactHeader {
+  margin-bottom: $spacing-xl;
+  text-align: center;
+}
+
+.contactSubtitle {
+  margin-top: $spacing-sm;
+  opacity: 0.85;
+}
+
+.contactForm {
+  max-width: 500px;
+  margin: 0 auto $spacing-xl;
+  padding: $spacing-xl;
+  background: var(--color-card);
+  border: 1px solid var(--color-border);
+  border-radius: $radius-xl;
+}
+
+.formGroup {
+  margin-bottom: $spacing-lg;
+}
+
+.formLabel {
+  display: block;
+  margin-bottom: $spacing-sm;
+  font-size: $font-size-sm;
+  font-weight: $font-weight-medium;
+  color: var(--color-text);
+}
+
+.formInput,
+.formTextarea {
+  width: 100%;
+  padding: $spacing-sm $spacing-md;
+  font-family: $font-family;
+  font-size: $font-size-base;
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: $radius-lg;
+  color: var(--color-text);
+  transition: all $transition-fast;
+  
+  &::placeholder {
+    color: var(--color-text-muted);
+  }
+  
+  &:focus {
+    outline: none;
+    border-color: var(--color-accent);
+    box-shadow: 0 0 0 3px rgba($color-accent, 0.1);
+  }
+}
+
+.formTextarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.formMessage {
+  padding: $spacing-sm $spacing-md;
+  border-radius: $radius-md;
+  margin-bottom: $spacing-lg;
+  font-size: $font-size-sm;
+  
+  &.success {
+    background: rgba(34, 197, 94, 0.1);
+    color: #16a34a;
+    border: 1px solid rgba(34, 197, 94, 0.2);
+  }
+  
+  &.error {
+    background: rgba(239, 68, 68, 0.1);
+    color: #dc2626;
+    border: 1px solid rgba(239, 68, 68, 0.2);
+  }
+}
+
+.formSubmit {
+  @include button-primary;
+  width: 100%;
+  
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+}
+
+.contactMethods {
+  @include flex-center;
+  flex-direction: column;
+  gap: $spacing-md;
+}
+
+.contactMethod {
+  @include flex-center;
+  gap: $spacing-sm;
+  padding: $spacing-sm $spacing-lg;
+  font-size: $font-size-base;
+  color: var(--color-text);
+  text-decoration: none;
+  border-radius: $radius-lg;
+  transition: all $transition-fast;
+  
+  &:hover {
+    background: var(--color-border);
+  }
+  
+  i {
+    color: var(--color-accent);
+  }
+}

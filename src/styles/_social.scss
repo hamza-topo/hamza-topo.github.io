@@ -1,0 +1,50 @@
+// ============================================
+// SOCIAL SECTION
+// ============================================
+
+@import 'variables';
+@import 'mixins';
+
+.social {
+  width: 100%;
+  padding: $space-4 0;
+}
+
+.socialIcons {
+  display: flex;
+  gap: $space-3;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.socialIcon {
+  width: 48px;
+  height: 48px;
+  @include flex-center;
+  border-radius: $radius-full;
+  border: $border-style;
+  background: var(--card);
+  color: var(--text);
+  font-size: $font-xl;
+  transition: all $transition-base;
+  @include link-reset;
+
+  &:hover {
+    background: var(--text);
+    color: var(--bg);
+    transform: translateY(-3px);
+    box-shadow: $shadow-lg;
+  }
+
+  .toolIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  @include mobile {
+    width: 44px;
+    height: 44px;
+    font-size: $font-lg;
+  }
+}

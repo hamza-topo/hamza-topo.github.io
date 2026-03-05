@@ -1,0 +1,140 @@
+// ==================== HERO SECTION ====================
+
+@import 'variables';
+@import 'mixins';
+
+.hero {
+  display: flex;
+  align-items: center;
+  padding: 0 $spacing-md;
+  min-height: clamp(520px, 80vh, 760px);
+  
+  @include mobile {
+    min-height: auto;
+    padding: $spacing-md $spacing-sm;
+  }
+}
+
+.heroInner {
+  width: 100%;
+  max-width: $container-max-width;
+  margin: 0 auto;
+  padding: $spacing-lg;
+  border: 1px solid var(--color-border);
+  border-radius: $radius-2xl;
+  background: var(--color-card);
+}
+
+.heroSplit {
+  display: grid;
+  grid-template-columns: 1fr 360px;
+  gap: 0;
+  align-items: center;
+  
+  @include mobile {
+    grid-template-columns: 1fr;
+    gap: $spacing-lg;
+  }
+}
+
+.heroContent {
+  min-width: 0;
+}
+
+.heroKicker {
+  margin: 0 0 $spacing-sm;
+  font-weight: $font-weight-extrabold;
+  letter-spacing: -0.02em;
+  opacity: 0.9;
+}
+
+.heroTitle {
+  margin: 0;
+  font-size: clamp(34px, 5.6vw, 64px);
+  line-height: 1.03;
+  letter-spacing: -0.03em;
+}
+
+.heroOutline {
+  color: transparent;
+  -webkit-text-stroke: 2px var(--color-text);
+}
+
+.heroSub {
+  margin: $spacing-md 0 $spacing-lg;
+  max-width: 64ch;
+  font-size: $font-size-base;
+  line-height: $line-height-relaxed;
+  opacity: 0.85;
+}
+
+// CTAs
+.heroCtas {
+  display: flex;
+  gap: $spacing-sm;
+  flex-wrap: wrap;
+}
+
+.btnPrimary,
+.btnGhost {
+  height: 42px;
+  padding: 0 $spacing-md;
+  border-radius: $radius-full;
+  text-decoration: none;
+  font-weight: $font-weight-extrabold;
+  border: 1px solid var(--color-border);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all $transition-fast;
+  
+  &:focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 2px;
+  }
+}
+
+.btnPrimary {
+  background: var(--color-text);
+  color: var(--color-bg);
+  
+  &:hover {
+    background: var(--color-accent);
+    border-color: var(--color-accent);
+    color: white;
+  }
+}
+
+.btnGhost {
+  background: transparent;
+  color: var(--color-text);
+  
+  &:hover {
+    background: var(--color-border);
+  }
+}
+
+// Image
+.heroVisual {
+  display: flex;
+  justify-content: flex-end;
+  
+  @include mobile {
+    order: -1;
+    justify-content: center;
+    margin-bottom: $spacing-xs;
+  }
+  
+  img {
+    width: 100%;
+    max-width: 300px;
+    aspect-ratio: 2 / 3;
+    object-fit: cover;
+    border-radius: 0 $radius-2xl $radius-2xl 0;
+    display: block;
+    
+    @include mobile {
+      max-width: 260px;
+    }
+  }
+}
