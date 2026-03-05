@@ -17,10 +17,22 @@ const LINKS = [
     href: "https://github.com/hamza-topo/",
     icon: '<i class="devicon-github-original"></i>',
   },
+  {
+    name: "Email",
+    href: "mailto:hamzaaitsidisaid11@outlook.com?subject=Hello%20Hamza",
+    icon: `
+      <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 
+        0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 
+        4-8 5-8-5V6l8 5 8-5v2z"/>
+      </svg>
+    `,
+  },
 ];
 
 export default function Footer(props) {
   const year = new Date().getFullYear();
+
   const lastUpdate = new Date().toLocaleDateString(undefined, {
     year: "numeric",
     month: "short",
@@ -36,31 +48,27 @@ export default function Footer(props) {
               key={l.name}
               className="footerIconBtn"
               href={l.href}
-              target="_blank"
+              target={l.href.startsWith("mailto:") ? "_self" : "_blank"}
               rel="noreferrer"
               aria-label={l.name}
               title={l.name}
             >
-              {l.icon ? (
               <div
                 className="toolIcon"
                 dangerouslySetInnerHTML={{ __html: l.icon }}
               />
-            ) : (
-              <img src={l.logo} alt={l.name} loading="lazy" />
-            )}
             </a>
           );
         })}
       </div>
 
       <div className="footerMeta">
-        <span>© {year} / {props.author ? (
-          <>
-            <span>{props.author}</span>
-          </>
-        ) : null}</span>
+        <span>
+          © {year} / {props.author ? <span>{props.author}</span> : null}
+        </span>
+
         <span className="footerDot">•</span>
+
         <span>Updated {lastUpdate}</span>
 
         {props.version ? (
