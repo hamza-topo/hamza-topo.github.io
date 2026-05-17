@@ -2,7 +2,7 @@ import React from "react";
 import "../css/Toolbox.css";
 import toolbox from "../data/toolbox.data";
 
-const groups = ["All", "Backend", "Frontend", "Data", "DevOps", "Workflow", "Project Management"];
+const groups = ["All", "Backend", "Frontend", "Data", "DevOps / Workflow"];
 
 export default function Toolbox() {
   const [active, setActive] = React.useState("All");
@@ -12,8 +12,8 @@ export default function Toolbox() {
 
   return (
     <section className="toolbox" id="toolbox">
-        <p className="toolboxSub">Tools I use to ship real systems.</p>
       <header className="toolboxHeader">
+        <p className="toolboxSub">Tools I use to ship real systems.</p>
         <div className="toolboxFilters">
           {groups.map((g) => (
             <button

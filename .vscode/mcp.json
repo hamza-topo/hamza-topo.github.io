@@ -1,0 +1,14 @@
+{
+  "servers": {
+    "vexp": {
+      "type": "stdio",
+      "command": "node",
+      "args": [
+        "c:\\Users\\LENOVO\\.vscode\\extensions\\vexp.vexp-vscode-2.0.17-win32-x64\\dist\\mcp-server.cjs"
+      ],
+      "env": {
+        "VEXP_WORKSPACE": "\\\\wsl.localhost\\Debian\\home\\topo\\projects\\hamza-topo.github.io"
+      }
+    }
+  }
+}

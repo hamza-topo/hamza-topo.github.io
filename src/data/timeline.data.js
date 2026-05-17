@@ -1,16 +1,17 @@
 const timeline = [
   {
-    job: "Software Engineer Lead",
+    job: "Software Lead Engineer",
     company: "Capgemini",
-    role: "PHP / Symfony • ERP & Digital Transformation • Tech lead + coordination",
-    location: "Casablanca, Morocco (Hybrid)",
+    role: "Mission for an international energy company",
+    location: "Capgemini",
     start: "Sep 2023",
     end: "Present",
     projects: [
-      "ERP maintenance & evolutions (PHP + SQL) in production context",
-      "Technical takeover & transition (environments, DNS migration, app connections)",
-      "Functional support & coordination (Mantis / ServiceNow, UAT, business validation)",
-      "Delivery quality & continuity during critical migrations and releases",
+      "Led application transition across Digital & ERP scope",
+      "Maintained and evolved enterprise PHP/Symfony applications",
+      "Handled L2/L3 support, incidents and change requests via ServiceNow",
+      "Worked on APIs, SOAP integrations, databases and production releases",
+      "Coordinated with business, architecture, operations and client stakeholders",
     ],
   },
 

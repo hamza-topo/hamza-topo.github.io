@@ -6,19 +6,15 @@ export default function Projects() {
   return (
     <section className="projects" id="projects">
       <header className="projectsHeader">
-        <h2 className="projectsTitle">i build in public.</h2>
+        <h2 className="projectsTitle">Side projects</h2>
         <p className="projectsIntro">
-          Visual proof. Short descriptions. Links when shareable.
+          Personal product ideas kept separate from enterprise client work.
         </p>
       </header>
 
       <div className="projectsGrid">
         {projects.map((p, idx) => (
           <article className="projectCard" key={idx}>
-            <div className="projectMedia">
-              <img src={p.image} alt={p.title} loading="lazy" />
-            </div>
-
             <div className="projectBody">
               <h3 className="projectName">{p.title}</h3>
               <p className="projectDesc">{p.description}</p>
@@ -31,15 +27,18 @@ export default function Projects() {
 
               <div className="projectLinks">
                 {p.links.github && (
-                  <a className="linkBtn" href={p.links.github} target="_blank" rel="noreferrer">
+                  <a className="linkBtn" href={p.links.github} target="_blank" rel="noopener noreferrer">
                     GitHub
                   </a>
                 )}
                 {p.links.demo && (
-                  <a className="linkBtn" href={p.links.demo} target="_blank" rel="noreferrer">
-                    Live
+                  <a className="linkBtn" href={p.links.demo} target="_blank" rel="noopener noreferrer">
+                    View project
                   </a>
                 )}
+                {!p.links.github && !p.links.demo ? (
+                  <span className="linkBtn linkBtnMuted">Read more soon</span>
+                ) : null}
               </div>
             </div>
           </article>

@@ -7,10 +7,11 @@ export default function Timeline() {
   return (
     <section className="timeline" id="timeline">
       <header className="timelineHeader">
-        <p className="timelineSub">Experience. impact. shipped work.</p>
+        <h2 className="timelineHeading">Experience that shipped real systems.</h2>
       </header>
       <div className="timelineContainer">
         <a href="/CV_2026-02-10_AIT-SIDI-SAID_HAMZA.pdf" download className="timelineTitle">
+          Download CV
         </a>
       </div>
       <div className="timelineTrack" aria-label="Work experience timeline">
@@ -24,9 +25,7 @@ export default function Timeline() {
                 <div className="timelineTopRow">
                   <div className="timelineMeta">
                     <p className="timelineJob">{exp.job}</p>
-                    <p className="timelineCompany">
-                      {exp.company} <span className="timelineSep">•</span> {exp.location}
-                    </p>
+                    <p className="timelineCompany">{exp.company}</p>
                   </div>
 
                   <div className="timelineDates">

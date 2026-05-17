@@ -7,24 +7,29 @@ export default function Hero() {
 
     <section className="hero" id="hero">
       <div className="heroInner heroSplit">
-        {/* LEFT */}
         <div className="heroContent">
-          <div className="heroInner">
-            <p className="heroKicker">👋 hi, i'm hamza</p>
+          <p className="heroKicker">hi, i’m hamza</p>
 
-            <h1 className="heroTitle">
-              i’m not a <span className="heroOutline">robot</span>.
-              <br />
-              i build things that actually work.
-            </h1>
+          <h1 className="heroTitle">
+            software lead engineer.
+            <br />
+            <span>i build, maintain and ship</span>
+            <br />
+            real-world web applications.
+          </h1>
 
-            <p className="heroSub">
-              I work on <strong>real-world projects</strong>, deal with legacy systems and constraints,
-              and focus on shipping maintainable, production-ready solutions.
-            </p>
+          <p className="heroSub">
+            I work on enterprise Digital & ERP applications, legacy systems, support L2/L3,
+            API integrations and production-ready delivery.
+          </p>
+
+          <div className="heroSignals" aria-label="Professional focus">
+            <span>PHP / Symfony</span>
+            <span>Enterprise apps</span>
+            <span>Production support</span>
           </div>
         </div>
-        {/* RIGHT */}
+
         <div className="heroVisual">
           <img src={me} alt="Hamza portrait" />
         </div>

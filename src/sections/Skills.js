@@ -8,6 +8,7 @@ const BLOGS_BASE = [
     subtitle: "I built a tiny Linux tool that shouts “FAHH” when I type the wrong command",
     desc:
       "A few weeks ago I noticed something about the way I work in the terminal.When I’m focused and typing commands fast, I tend to make a lot of small mistakes.",
+    tags: ["Linux", "DevOps"],
     href: "https://dev.to/hamzatopo/i-built-a-tiny-linux-tool-that-shouts-fahh-when-i-type-the-wrong-command-3fio",
   },
   {
@@ -16,6 +17,7 @@ const BLOGS_BASE = [
     subtitle: "What it is. Why it matters. How to implement it.",
     desc:
       "I vividly recall my initial encounter with the term \"Design Pattern\" – a moment of profound confusion as I grappled with whether it was a mere philosophical concept or a collection of abstract theories. The burning question in my mind was: how could such a concept be practically applied to something as tangible as my to-do list project 😅?",
+    tags: ["Laravel"],
     href: "https://dev.to/hamzatopo/laravel-design-pattern-repository-4m7f",
   },
   {
@@ -24,6 +26,7 @@ const BLOGS_BASE = [
     subtitle: "A practical guide to deploying your React app to GitHub Pages.",
     desc:
       "Hey there, fellow developers! 🎉 Let's get your React app out into the world! 🚀 Today, we're going to deploy it to GitHub Pages, a super easy way to share your creations with everyone.",
+    tags: ["React", "GitHub Actions", "DevOps"],
     href: "https://dev.to/hamzatopo/react-js-github-actions-321e",
   },
 ];
@@ -187,8 +190,10 @@ export default function Blogs() {
               }}
               onKeyDown={onKeyDown}
               aria-label="Search blogs"
+              role="combobox"
               aria-autocomplete="list"
               aria-expanded={openSuggest ? "true" : "false"}
+              aria-controls="blog-suggestions"
             />
 
             {query ? (
@@ -204,7 +209,7 @@ export default function Blogs() {
             ) : null}
 
             {openSuggest && suggestions.length > 0 ? (
-              <div className="blogSuggest" role="listbox">
+              <div className="blogSuggest" id="blog-suggestions" role="listbox">
                 {suggestions.map((s, idx) => (
                   <button
                     type="button"
@@ -247,10 +252,10 @@ export default function Blogs() {
             className="blogBanner"
             href={b.href}
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
           >
-            <div className="blogImgWrap">
-              <img src={b.img} alt={b.title} loading="lazy" />
+            <div className="blogImgWrap" aria-hidden="true">
+              <img src={b.img} alt="" loading="lazy" />
             </div>
 
             <div className="blogContent">
@@ -260,10 +265,14 @@ export default function Blogs() {
               </div>
 
               <p className="blogDesc">{b.desc}</p>
+              <div className="blogTags">
+                {b.tags.map((tag) => (
+                  <span className="tag" key={tag}>{tag}</span>
+                ))}
+              </div>
 
               <span className="blogCta">
-                read → <span className="blogCtaHint">opens in new tab</span><br></br>
-                published: <span className="blogCtaHint">{b.published}</span>
+                read article <span className="blogCtaHint">/ {b.published}</span>
               </span>
             </div>
           </a>

@@ -5,10 +5,10 @@ import Timeline from './sections/Timeline';
 import Skills from './sections/Skills';
 import Toolbox from './sections/Toolbox';
 import Projects from './sections/Projects';
-import Contact from './sections/Contact';
-import Social from "./sections/Social";
 import ThemeToggle from "./Components/ThemeToggle";
 import Footer from "./sections/Footer";
+import EnterpriseWork from "./sections/EnterpriseWork";
+import FinalCta from "./sections/FinalCta";
 import { APP_VERSION, APP_AUTHOR } from "./version";
 export default function App() {
   return (
@@ -20,7 +20,10 @@ export default function App() {
         <Hero />
         <Timeline />
         <Toolbox />
+        <EnterpriseWork />
+        <Projects />
         <Skills />
+        <FinalCta />
         <Footer version={APP_VERSION} author={APP_AUTHOR} />
       </main>
     </div>

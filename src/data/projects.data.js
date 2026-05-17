@@ -1,38 +1,22 @@
-import p1 from "../assets/projects/p1.svg";
-import p2 from "../assets/projects/p2.svg";
-import p3 from "../assets/projects/p3.svg";
-
 const projects = [
   {
-    title: "TASK MANAGER API",
+    title: "WhatsaStore",
     description:
-      "Backend REST API for managing projects and tasks, designed with clean architecture principles, JWT authentication, and Docker-based deployment using PostgreSQL.",
-    tags: ["REST API", "JWT Authentication", "Clean Architecture"],
-    image: p1,
+      "Lightweight SaaS CRM for small businesses using WhatsApp as their main sales and customer follow-up channel. Features include leads, contacts, products, orders, invoices, customer follow-up, dashboard and a browser extension concept.",
+    tags: ["SaaS CRM", "WhatsApp workflow", "Small business"],
     links: {
-      demo: null,
-      github: "https://github.com/hamza-topo/task-manager-api"
+      demo: "https://whatsastore.netlify.app/",
+      github: null
     }
   },
   {
-    title: "PetMingle – Pet Matching API",
+    title: "Sketchstash",
     description:
-      "RESTful Pet Matching API built with Laravel 8, designed for mobile and web consumption, with an extensible and well-documented backend architecture.",
-    tags: ["Laravel", "REST API", "Mobile Backend"],
-    image: p2,
+      "Developer knowledge base for saving commands, notes and technical snippets. Built for developers who want to store and reuse practical knowledge without losing it in terminal chaos.",
+    tags: ["Developer tool", "Knowledge base", "Commands"],
     links: {
       demo: null,
-      github: "https://github.com/hamza-topo/petmingle/"
-    }
-  },
-  {
-    title: "Filovent Rebuild",
-    description:
-      "Website redesign of Filovent with a strong focus on UX/UI improvements, performance optimization, and responsive design.",
-    tags: ["Fullstack", "Website Redesign", "Performance Optimization"],
-    image: p3,
-    links: {
-      demo: "https://www.filovent.com/",
+      github: "https://github.com/hamza-topo/boxnot"
     }
   }
 ];
